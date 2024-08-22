@@ -2,13 +2,13 @@
 
 namespace AgentTargetRest.Models
 {
+    public enum TargetStatus
+    {
+        Alive,
+        dead
+    }
     public class TargetModel
     {
-        public enum Status
-        {
-            Alive,
-            dead
-        }
 
         public long Id { get; set; }
 
@@ -22,6 +22,6 @@ namespace AgentTargetRest.Models
         public required string Role { get; set; }
         public int X { get; set; } = -1;
         public int Y { get; set; } = -1;
-        public Status TargetStatus { get; set; } = Status.Alive;
+        public TargetStatus TargetStatus { get; set; } = TargetStatus.Alive;
     }
 }

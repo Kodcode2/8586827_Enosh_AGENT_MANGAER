@@ -6,27 +6,36 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgentTargetRest.Services
 {
-    public class TargetService : ITargetService
+    public class TargetService(ApplicationDbContext context) : ITargetService
     {
-        private readonly ApplicationDbContext _context;
-
-        public async Task<ActionResult<TargetModel >> DeleteTargetModelAsync(long id)
+        private readonly Dictionary<string, (int, int)> Direction = new()
         {
-            var target = await _context.Targets.FindAsync(id);
+            {"n", (0, 1)},
+            {"s", (0, -1)},
+            {"e", (-1, 0)},
+            {"w", (1, 0)},
+            {"ne", (-1, 1)},
+            {"nw", (1, 1)},
+            {"se", (-1, -1)},
+            {"sw", (1, -1)}
+        };
+        public async Task<ActionResult<TargetModel>> DeleteTargetModelAsync(long id)
+        {
+            var target = await context.Targets.FindAsync(id);
             if (target == null)
             {
                 return null;
             }
 
-            _context.Targets.Remove(target);
-            await _context.SaveChangesAsync();
+            context.Targets.Remove(target);
+            await context.SaveChangesAsync();
 
             return target;
         }
 
         public async Task<ActionResult<TargetModel>> GetTargetModelAsync(long id)
         {
-            var target = await _context.Targets.FindAsync(id);
+            var target = await context.Targets.FindAsync(id);
 
             if (target == null)
             {
@@ -38,7 +47,7 @@ namespace AgentTargetRest.Services
 
         public async Task<List<TargetModel>> GetTargetsAsync()
         {
-            return await _context.Targets.ToListAsync();
+            return await context.Targets.ToListAsync();
         }
 
         public async Task<ActionResult<TargetModel>> PostTargetModel(TargetDto targetDto)
@@ -51,8 +60,8 @@ namespace AgentTargetRest.Services
                     Name = targetDto.Name,
                     Role = targetDto.Position
                 };
-                await _context.Targets.AddAsync(target);
-                await _context.SaveChangesAsync();
+                await context.Targets.AddAsync(target);
+                await context.SaveChangesAsync();
                 return target;
             }
             catch (Exception ex)
@@ -64,23 +73,54 @@ namespace AgentTargetRest.Services
         public async Task<ActionResult<TargetModel>> UpdateTargetAsync(long id, TargetModel targetModel)
         {
 
-            if (!_context.Targets.Any(a => a.Id == id))
+            if (!context.Targets.Any(a => a.Id == id))
             {
                 return null;
             }
             try
             {
-                var target = await _context.Targets.FirstOrDefaultAsync(a => a.Id == id);
+                var target = await context.Targets.FirstOrDefaultAsync(a => a.Id == id);
                 target.Name = targetModel.Name;
                 target.Role = targetModel.Role;
                 target.Image = targetModel.Image;
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
                 return target;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public async Task<TargetModel> MoveTarget(long id, DirectionsDto directionDto)
+        {
+            TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
+            if (target == null)
+            {
+                throw new Exception("Target not found");
+            }
+            var (x, y) = Direction[directionDto.Direction];
+            target.X += x;
+            target.Y += y;
+            if(target.X < 0 || target.X > 1000 || target.Y < 0 || target.Y > 1000)
+            {
+                throw new Exception($"Range over, the target is in: ({target.X},{target.Y})");
+            }
+            await context.SaveChangesAsync();
+            return target;
+        }
+
+        public async Task<TargetModel> Pin(PinDto pin, long id)
+        {
+            TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
+            if (target == null)
+            {
+                throw new Exception("Target not found");
+            }
+            target.X = pin.X;
+            target.Y = pin.Y;
+            await context.SaveChangesAsync();
+            return target;
         }
     }
 }

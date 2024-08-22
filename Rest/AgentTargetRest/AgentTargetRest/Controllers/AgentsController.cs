@@ -11,13 +11,13 @@ namespace AgentTargetRest.Controllers
     public class AgentsController(IAgentService _agentService) : ControllerBase
     {
 
-        [HttpGet("get-agents")]
+        [HttpGet("agents")]
         public async Task<ActionResult<List<AgentModel>>> GetAgents()
         {
             return Ok(await _agentService.GetAgentsAsync());
         }
 
-        [HttpGet("get-agent{id}")]
+        [HttpGet("get-agent/{id}")]
         public async Task<ActionResult<AgentModel>> GetAgentModel(long id)
         {
             try
@@ -31,7 +31,7 @@ namespace AgentTargetRest.Controllers
         }
 
 
-        [HttpPut("update-agent{id}")]
+        [HttpPut("update-agent/{id}")]
         public async Task<IActionResult> PutAgentModel(long id, AgentModel agent)
         {
             try
@@ -44,7 +44,7 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-        [HttpPost("create-agent")]
+        [HttpPost("agents")]
         public async Task<ActionResult<AgentModel>> PostAgentModel(AgentDto agentDto)
         {
             try
@@ -57,13 +57,39 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-        [HttpDelete("delete-agent{id}")]
+        [HttpDelete("delete-agent/{id}")]
         public async Task<IActionResult> DeleteAgentModel(long id)
         {
             try
             {
                 await _agentService.DeleteAgentModelAsync(id);
                 return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/pin")]
+        public async Task<ActionResult<TargetModel>> PinAsync(PinDto pinDto, long id)
+        {
+            try
+            {
+                return Ok(await _agentService.Pin(pinDto, id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/move")]
+        public async Task<ActionResult<TargetModel>> MoveAsync(DirectionsDto directions, long id)
+        {
+            try
+            {
+                return Ok(await _agentService.MoveAgent(id, directions));
             }
             catch (Exception ex)
             {

@@ -11,5 +11,7 @@ namespace AgentTargetRest.Services
         Task<ActionResult<TargetModel>> PostTargetModel(TargetDto targetDto);
         Task<ActionResult<TargetModel>> UpdateTargetAsync(long id, TargetModel targetModel);
         Task<ActionResult<TargetModel>> DeleteTargetModelAsync(long id);
+        Task<TargetModel> MoveTarget(long id, DirectionsDto directionDto);
+        Task<TargetModel> Pin(PinDto pin, long id);
     }
 }

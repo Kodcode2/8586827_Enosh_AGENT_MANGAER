@@ -1,0 +1,354 @@
+[
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "MoveAsync",
+    "RelativePath": "api/Agents/{id}/move",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directions",
+        "Type": "AgentTargetRest.Dto.DirectionsDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "PinAsync",
+    "RelativePath": "api/Agents/{id}/pin",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pinDto",
+        "Type": "AgentTargetRest.Dto.PinDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "GetAgents",
+    "RelativePath": "api/Agents/agents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AgentTargetRest.Models.AgentModel, AgentTargetRest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "PostAgentModel",
+    "RelativePath": "api/Agents/agents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agentDto",
+        "Type": "AgentTargetRest.Dto.AgentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.AgentModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "DeleteAgentModel",
+    "RelativePath": "api/Agents/delete-agent/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "GetAgentModel",
+    "RelativePath": "api/Agents/get-agent/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.AgentModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.AgentsController",
+    "Method": "PutAgentModel",
+    "RelativePath": "api/Agents/update-agent/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "agent",
+        "Type": "AgentTargetRest.Models.AgentModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "MoveAsync",
+    "RelativePath": "api/Target/{id}/move",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directions",
+        "Type": "AgentTargetRest.Dto.DirectionsDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "PinAsync",
+    "RelativePath": "api/Target/{id}/pin",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pinDto",
+        "Type": "AgentTargetRest.Dto.PinDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "DeleteTargetModel",
+    "RelativePath": "api/Target/delete-target/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "GetTargetModel",
+    "RelativePath": "api/Target/get-target/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "GetTarget",
+    "RelativePath": "api/Target/targets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AgentTargetRest.Models.TargetModel, AgentTargetRest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "PostTargetModel",
+    "RelativePath": "api/Target/targets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "targetDto",
+        "Type": "AgentTargetRest.Dto.TargetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.TargetController",
+    "Method": "PutTargetModel",
+    "RelativePath": "api/Target/update-target/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "target",
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AgentTargetRest.Models.TargetModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

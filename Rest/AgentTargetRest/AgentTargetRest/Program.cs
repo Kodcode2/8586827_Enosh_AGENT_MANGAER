@@ -1,8 +1,7 @@
 
 using AgentTargetRest.Data;
-using Microsoft.EntityFrameworkCore;
-using AgentTargetRest.Controllers;
 using AgentTargetRest.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgentTargetRest
 {
@@ -20,14 +19,14 @@ namespace AgentTargetRest
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IAgentService, AgentService>();
             builder.Services.AddScoped<ITargetService, TargetService>();
-           
+
 
 
             builder.Services.AddDbContext<ApplicationDbContext>(
                 option => option.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection"
                     )
-                )    
+                )
             );
 
             var app = builder.Build();
@@ -35,7 +34,7 @@ namespace AgentTargetRest
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger( );
+                app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
@@ -43,8 +42,9 @@ namespace AgentTargetRest
 
             app.UseAuthorization();
 
+
             app.MapControllers();
-    
+
             app.Run();
         }
     }

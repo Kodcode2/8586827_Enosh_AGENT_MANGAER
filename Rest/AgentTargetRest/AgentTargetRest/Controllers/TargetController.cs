@@ -11,13 +11,13 @@ namespace AgentTargetRest.Controllers
     public class TargetController(ITargetService targetService) : ControllerBase
     {
 
-        [HttpGet("get-targets")]
+        [HttpGet("targets")]
         public async Task<ActionResult<List<TargetModel>>> GetTarget()
         {
             return Ok(await targetService.GetTargetsAsync());
         }
 
-        [HttpGet("get-target{id}")]
+        [HttpGet("get-target/{id}")]
         public async Task<ActionResult<TargetModel>> GetTargetModel(long id)
         {
             try
@@ -30,7 +30,7 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-       /* [HttpPut("update-target{id}")]
+        [HttpPut("update-target/{id}")]
         public async Task<ActionResult<TargetModel>> PutTargetModel(long id, [FromBody] TargetModel target)
         {
             try
@@ -42,9 +42,9 @@ namespace AgentTargetRest.Controllers
             {
                 return BadRequest(ex.Message);
             }
-        }*/
+        }
 
-        [HttpPost("create-target")]
+        [HttpPost("targets")]
         public async Task<ActionResult<TargetModel>> PostTargetModel(TargetDto targetDto)
         {
             try
@@ -58,7 +58,7 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-        [HttpDelete("delete-target{id}")]
+        [HttpDelete("delete-target/{id}")]
         public async Task<IActionResult> DeleteTargetModel(long id)
         {
             try
@@ -71,6 +71,32 @@ namespace AgentTargetRest.Controllers
                 return BadRequest(ex.Message);
             }
 
+        }
+
+        [HttpPut("{id}/pin")]
+        public async Task<ActionResult<TargetModel>> PinAsync(PinDto pinDto , long id)
+        {
+            try
+            {
+                return Ok(await targetService.Pin(pinDto, id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}/move")]
+        public async Task<ActionResult<TargetModel>> MoveAsync(DirectionsDto directions, long id)
+        {
+            try
+            {
+                return Ok(await targetService.MoveTarget(id, directions));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
