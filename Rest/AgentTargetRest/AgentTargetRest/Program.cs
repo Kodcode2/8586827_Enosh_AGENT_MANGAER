@@ -1,6 +1,8 @@
 
 using AgentTargetRest.Data;
 using Microsoft.EntityFrameworkCore;
+using AgentTargetRest.Controllers;
+using AgentTargetRest.Services;
 
 namespace AgentTargetRest
 {
@@ -16,6 +18,8 @@ namespace AgentTargetRest
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IAgentService, AgentService>();
+            builder.Services.AddScoped<ITargetService, TargetService>();
            
 
 
@@ -39,9 +43,8 @@ namespace AgentTargetRest
 
             app.UseAuthorization();
 
-
             app.MapControllers();
-
+    
             app.Run();
         }
     }
