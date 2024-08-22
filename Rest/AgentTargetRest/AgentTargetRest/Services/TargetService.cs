@@ -56,7 +56,7 @@ namespace AgentTargetRest.Services
             {
                 TargetModel target = new()
                 {
-                    Image = targetDto.Photo_Url,
+                    Image = targetDto.PhotoUrl,
                     Name = targetDto.Name,
                     Role = targetDto.Position
                 };
@@ -109,6 +109,7 @@ namespace AgentTargetRest.Services
                 throw new Exception($"Range over, the target is in: ({target.X},{target.Y})");
             }
             await context.SaveChangesAsync();
+
             return target;
         }
 
@@ -125,16 +126,26 @@ namespace AgentTargetRest.Services
             return target;
         }
 
-        public async bool IsTargetValid(long id)
+        public async Task<bool> IsTargetValid(TargetModel target)
         {
-            if (context.Targets.Any(t => t.Id == id))
+            if (context.Targets.Any(t => t.Id == target.Id))
             {
                 var a = await context.Missions.Where(m => m.MissionStatus == 0).ToListAsync();
                 var b = a.Select(a => a.TargetId).ToList();
-                if (b.Contains(id))
+                if (b.Contains(target.Id))
                 { return true; }
             }
             return false;
+        }
+
+        public async Task<TargetModel> FindTargetById(long id)
+        {
+            TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
+            if (target == null)
+            {
+                throw new Exception("Target not found");
+            }
+            return target;
         }
     }
 }

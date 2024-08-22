@@ -17,8 +17,11 @@ namespace AgentTargetRest
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient(typeof(Lazy<>), typeof(Lazy<>));
+
             builder.Services.AddScoped<IAgentService, AgentService>();
             builder.Services.AddScoped<ITargetService, TargetService>();
+            builder.Services.AddScoped<IMissionService, MissionService>();
 
 
 

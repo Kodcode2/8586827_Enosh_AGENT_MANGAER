@@ -6,8 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgentTargetRest.Services
 {
-    public class AgentService(ApplicationDbContext context) : IAgentService
+    public class AgentService(IServiceProvider serviceProvider, ApplicationDbContext context) : IAgentService
     {
+        private IMissionService missionService = serviceProvider.GetRequiredService<IMissionService>();
+        private ITargetService targetService = serviceProvider.GetRequiredService<ITargetService>();
 
         private readonly Dictionary<string, (int, int)> Direction = new()
         {
@@ -94,6 +96,7 @@ namespace AgentTargetRest.Services
                 throw new Exception($"Range over, the agent is in: ({agent.X},{agent.Y})");
             }
             await context.SaveChangesAsync();
+            var missionList = await missionService.CreateListMissionsFromAgent(id);
             return agent;
         }
 
@@ -117,8 +120,8 @@ namespace AgentTargetRest.Services
             {
                 AgentModel agent = new()
                 {
-                    Image = agentDto.Photo_Url,
-                    NickName = agentDto.Name,
+                    Image = agentDto.PhotoUrl,
+                    NickName = agentDto.NickName,
                 };
                 await context.Agents.AddAsync(agent);
                 await context.SaveChangesAsync();
@@ -128,7 +131,7 @@ namespace AgentTargetRest.Services
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
         }
 

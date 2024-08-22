@@ -4,6 +4,7 @@ namespace AgentTargetRest.Services
 {
     public interface IMissionService
     {
-        Task<List<MissionModel>> IsAgentHasMission(long id);
+        Task<List<MissionModel>> CreateListMissionsFromAgent(long id);
+        Task<MissionModel> CreateMission(MissionModel mission);
     }
 }

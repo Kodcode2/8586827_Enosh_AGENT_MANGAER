@@ -13,6 +13,7 @@ namespace AgentTargetRest.Services
         Task<ActionResult<TargetModel>> DeleteTargetModelAsync(long id);
         Task<TargetModel> MoveTarget(long id, DirectionsDto directionDto);
         Task<TargetModel> Pin(PinDto pin, long id);
-        bool IsTargetValid(long id);
+        Task<bool> IsTargetValid(TargetModel target);
+        Task<TargetModel> FindTargetById(long id);
     }
 }

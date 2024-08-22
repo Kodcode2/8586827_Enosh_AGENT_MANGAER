@@ -171,6 +171,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AgentTargetRest.Controllers.MissionController",
+    "Method": "Create",
+    "RelativePath": "api/Mission/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mission",
+        "Type": "AgentTargetRest.Models.MissionModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
     "Method": "GetTarget",
     "RelativePath": "Targets",
@@ -192,7 +208,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "PostTargetModel",
+    "Method": "Create",
     "RelativePath": "Targets",
     "HttpMethod": "POST",
     "IsController": true,
@@ -206,7 +222,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AgentTargetRest.Dto.IdDto",
+        "Type": "System.Int64",
         "MediaTypes": [
           "text/plain",
           "application/json",

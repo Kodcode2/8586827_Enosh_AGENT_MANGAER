@@ -45,15 +45,16 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<IdDto>> PostTargetModel([FromBody] TargetDto targetDto)
+        public async Task<ActionResult<long>> Create([FromBody] TargetDto targetDto)
         {
             try
-            {
-                return Created("success", await targetService.CreateTargetModel(targetDto));
-                //return CreatedAtAction(nameof(PostTargetModel), targetDto);
+            { 
+                var t = await targetService.CreateTargetModel(targetDto);
+                return Created("success", t);
             }
             catch (Exception ex)
             {
+                var x = 0;
                 return BadRequest(ex.Message);
             }
         }

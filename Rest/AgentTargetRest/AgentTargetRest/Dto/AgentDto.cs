@@ -2,7 +2,7 @@
 {
     public class AgentDto
     {
-        public string Name {  get; set; }
-        public string Photo_Url { get; set; }
+        public string NickName {  get; set; }
+        public string PhotoUrl { get; set; }
     }
 }
