@@ -6,12 +6,12 @@ using AgentTargetRest.Dto;
 
 namespace AgentTargetRest.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AgentsController(IAgentService _agentService) : ControllerBase
     {
 
-        [HttpGet("agents")]
+        [HttpGet]
         public async Task<ActionResult<List<AgentModel>>> GetAgents()
         {
             return Ok(await _agentService.GetAgentsAsync());
@@ -44,13 +44,14 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-        [HttpPost("agents")]
-        public async Task<ActionResult<AgentModel>> PostAgentModel(AgentDto agentDto)
+        [HttpPost]
+        public async Task<ActionResult<IdDto>> PostAgentModel([FromBody] AgentDto agentDto)
         {
             try
             {
-                await _agentService.PostAgentModel(agentDto);
-                return Created("success", agentDto);
+               
+                return Created("success", await _agentService.CreateAgentModel(agentDto));
+              // return CreatedAtAction(nameof(PostAgentModel), agentDto);
             }catch (Exception ex)
             {
                 return BadRequest(ex.Message);
@@ -96,5 +97,6 @@ namespace AgentTargetRest.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        //public async Task<>
     }
 }

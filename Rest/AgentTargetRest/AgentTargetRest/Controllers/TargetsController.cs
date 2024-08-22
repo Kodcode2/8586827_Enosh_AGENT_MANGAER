@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AgentTargetRest.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class TargetController(ITargetService targetService) : ControllerBase
+    public class TargetsController(ITargetService targetService) : ControllerBase
     {
 
-        [HttpGet("targets")]
+        [HttpGet]
         public async Task<ActionResult<List<TargetModel>>> GetTarget()
         {
             return Ok(await targetService.GetTargetsAsync());
@@ -44,13 +44,13 @@ namespace AgentTargetRest.Controllers
             }
         }
 
-        [HttpPost("targets")]
-        public async Task<ActionResult<TargetModel>> PostTargetModel(TargetDto targetDto)
+        [HttpPost]
+        public async Task<ActionResult<IdDto>> PostTargetModel([FromBody] TargetDto targetDto)
         {
             try
             {
-                await targetService.PostTargetModel(targetDto);
-                return Created("success", targetDto);
+                return Created("success", await targetService.CreateTargetModel(targetDto));
+                //return CreatedAtAction(nameof(PostTargetModel), targetDto);
             }
             catch (Exception ex)
             {

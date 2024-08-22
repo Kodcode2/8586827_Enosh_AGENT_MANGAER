@@ -58,23 +58,7 @@ namespace AgentTargetRest.Services
             }
         }
 
-        public async Task<ActionResult<AgentModel>> PostAgentModel(AgentDto agentDto)
-        {
-            try
-            {
-                AgentModel agent = new()
-                {
-                    Image = agentDto.Photo_Url,
-                    NickName = agentDto.Name,
-                };
-                await context.Agents.AddAsync(agent);
-                await context.SaveChangesAsync();
-                return agent;
-            }catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+
 
         public async Task<ActionResult<AgentModel>> DeleteAgentModelAsync(long id)
         {
@@ -126,5 +110,52 @@ namespace AgentTargetRest.Services
             return agent;
         }
 
+      
+        public async Task<IdDto> CreateAgentModel(AgentDto agentDto)
+        {
+            try
+            {
+                AgentModel agent = new()
+                {
+                    Image = agentDto.Photo_Url,
+                    NickName = agentDto.Name,
+                };
+                await context.Agents.AddAsync(agent);
+                await context.SaveChangesAsync();
+                var a = await context.Agents.FirstOrDefaultAsync(A => A.Image == agent.Image && A.NickName == agent.NickName);
+                IdDto idDto = new() { Id = a.Id };
+                return idDto;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        // function check if the agent are avalible for missions
+        public async Task<bool> IsAgentFree(long id)
+        {
+            var agent = await FindAgentById(id);
+            if (agent.AgentStatus == AgentStatus.Dormant)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        // function find the agent by id and return the agent
+        public async Task<AgentModel> FindAgentById(long id)
+        {
+            AgentModel? agent = await context.Agents.FirstOrDefaultAsync(t => t.Id == id);
+            if (agent == null)
+            {
+                throw new Exception("Target not found");
+            }
+            return agent;
+        }
+
+    
     }
 }

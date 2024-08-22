@@ -5,7 +5,8 @@ namespace AgentTargetRest.Models
     public enum TargetStatus
     {
         Alive,
-        dead
+        OnTask,
+        Dead
     }
     public class TargetModel
     {

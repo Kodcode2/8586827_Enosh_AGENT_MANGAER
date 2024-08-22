@@ -19,8 +19,8 @@ namespace AgentTargetRest.Models
         [Required]
         public long AgentId { get; set; }
         public AgentModel? Agent { get; set; }
-        public Double TimeLeft { get; set; }
-        public Double ExecutionTime { get; set; }
+        public double TimeLeft { get; set; }
+        public double ExecutionTime { get; set; }
         public Status MissionStatus { get; set; } = Status.KillPropose;
     }
 }

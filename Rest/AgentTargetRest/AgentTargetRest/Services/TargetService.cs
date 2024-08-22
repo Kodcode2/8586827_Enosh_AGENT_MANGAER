@@ -50,7 +50,7 @@ namespace AgentTargetRest.Services
             return await context.Targets.ToListAsync();
         }
 
-        public async Task<ActionResult<TargetModel>> PostTargetModel(TargetDto targetDto)
+        public async Task<IdDto> CreateTargetModel(TargetDto targetDto)
         {
             try
             {
@@ -62,7 +62,9 @@ namespace AgentTargetRest.Services
                 };
                 await context.Targets.AddAsync(target);
                 await context.SaveChangesAsync();
-                return target;
+                var a = await context.Targets.FirstOrDefaultAsync(A => A.Image == target.Image && A.Name == target.Name && A.Role == target.Role);
+                IdDto idDto = new() { Id = a.Id };
+                return idDto;
             }
             catch (Exception ex)
             {
@@ -121,6 +123,18 @@ namespace AgentTargetRest.Services
             target.Y = pin.Y;
             await context.SaveChangesAsync();
             return target;
+        }
+
+        public async bool IsTargetValid(long id)
+        {
+            if (context.Targets.Any(t => t.Id == id))
+            {
+                var a = await context.Missions.Where(m => m.MissionStatus == 0).ToListAsync();
+                var b = a.Select(a => a.TargetId).ToList();
+                if (b.Contains(id))
+                { return true; }
+            }
+            return false;
         }
     }
 }
