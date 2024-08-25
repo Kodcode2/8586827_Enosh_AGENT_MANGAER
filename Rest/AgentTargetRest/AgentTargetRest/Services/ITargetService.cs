@@ -11,9 +11,9 @@ namespace AgentTargetRest.Services
         Task<IdDto> CreateTargetModel(TargetDto targetDto);
         Task<ActionResult<TargetModel>> UpdateTargetAsync(long id, TargetModel targetModel);
         Task<ActionResult<TargetModel>> DeleteTargetModelAsync(long id);
-        Task<TargetModel> MoveTarget(long id, DirectionsDto directionDto);
-        Task<TargetModel> Pin(PinDto pin, long id);
-        Task<bool> IsTargetValid(TargetModel target);
-        Task<TargetModel> FindTargetById(long id);
+        Task<TargetModel> MoveTargetAsync(long id, DirectionsDto directionDto);
+        Task<TargetModel> PinAsync(PinDto pin, long id);
+        Task<bool> IsTargetValidAsync(TargetModel target);
+        Task<TargetModel> FindTargetByIdAsync(long id);
     }
 }

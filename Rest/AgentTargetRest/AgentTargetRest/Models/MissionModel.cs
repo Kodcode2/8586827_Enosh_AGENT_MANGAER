@@ -2,14 +2,14 @@
 
 namespace AgentTargetRest.Models
 {
+    public enum MissionStatus
+    {
+        KillPropose,
+        OnTask,
+        MissionEnded
+    }
     public class MissionModel
     {
-        public enum Status
-        {
-            KillPropose,
-            OnTask,
-            MissionEnded
-        }
         public long Id { get; set; }
 
         [Required]
@@ -21,6 +21,6 @@ namespace AgentTargetRest.Models
         public AgentModel? Agent { get; set; }
         public double TimeLeft { get; set; }
         public double ExecutionTime { get; set; }
-        public Status MissionStatus { get; set; } = Status.KillPropose;
+        public MissionStatus MissionStatus { get; set; } = MissionStatus.KillPropose;
     }
 }

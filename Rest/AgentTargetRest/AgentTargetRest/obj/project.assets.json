@@ -8330,11 +8330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\Rest\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
+      "projectUniqueName": "C:\\Users\\kodcode\\Downloads\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
       "projectName": "AgentTargetRest",
-      "projectPath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\Rest\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
+      "projectPath": "C:\\Users\\kodcode\\Downloads\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
       "packagesPath": "C:\\Users\\kodcode\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\Rest\\AgentTargetRest\\AgentTargetRest\\obj\\",
+      "outputPath": "C:\\Users\\kodcode\\Downloads\\AgentTargetRest\\AgentTargetRest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,13 +12,13 @@ namespace AgentTargetRest.Controllers
     {
 
         [HttpGet]
-        public async Task<ActionResult<List<AgentModel>>> GetAgents()
+        public async Task<ActionResult<List<AgentModel>>> GetAgentsAsync()
         {
             return Ok(await _agentService.GetAgentsAsync());
         }
 
         [HttpGet("get-agent/{id}")]
-        public async Task<ActionResult<AgentModel>> GetAgentModel(long id)
+        public async Task<ActionResult<AgentModel>> GetAgentModelAsync(long id)
         {
             try
             {              
@@ -32,7 +32,7 @@ namespace AgentTargetRest.Controllers
 
 
         [HttpPut("update-agent/{id}")]
-        public async Task<IActionResult> PutAgentModel(long id, AgentModel agent)
+        public async Task<IActionResult> PutAgentModelAsync(long id, AgentModel agent)
         {
             try
             {
@@ -45,12 +45,12 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<IdDto>> PostAgentModel([FromBody] AgentDto agentDto)
+        public async Task<ActionResult<IdDto>> PostAgentModelAsync([FromBody] AgentDto agentDto)
         {
             try
             {
                
-                return Created("success", await _agentService.CreateAgentModel(agentDto));
+                return Created("success", await _agentService.CreateAgentModelAsync(agentDto));
               // return CreatedAtAction(nameof(PostAgentModel), agentDto);
             }catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpDelete("delete-agent/{id}")]
-        public async Task<IActionResult> DeleteAgentModel(long id)
+        public async Task<IActionResult> DeleteAgentModelAsync(long id)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace AgentTargetRest.Controllers
         {
             try
             {
-                return Ok(await _agentService.Pin(pinDto, id));
+                return Ok(await _agentService.PinAsync(pinDto, id));
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace AgentTargetRest.Controllers
         {
             try
             {
-                return Ok(await _agentService.MoveAgent(id, directions));
+                return Ok(await _agentService.MoveAgentAsync(id, directions));
             }
             catch (Exception ex)
             {

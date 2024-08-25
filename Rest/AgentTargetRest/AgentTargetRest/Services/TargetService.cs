@@ -6,18 +6,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgentTargetRest.Services
 {
-    public class TargetService(ApplicationDbContext context) : ITargetService
+    public class TargetService(IServiceProvider serviceProvider, ApplicationDbContext context) : ITargetService
     {
+        private IMissionService missionService => serviceProvider.GetRequiredService<IMissionService>();
+
         private readonly Dictionary<string, (int, int)> Direction = new()
         {
+            
             {"n", (0, 1)},
             {"s", (0, -1)},
-            {"e", (-1, 0)},
-            {"w", (1, 0)},
-            {"ne", (-1, 1)},
-            {"nw", (1, 1)},
-            {"se", (-1, -1)},
-            {"sw", (1, -1)}
+            {"e", (1, 0)},
+            {"w", (-1, 0)},
+            {"ne", (1, 1)},
+            {"nw", (-1, 1)},
+            {"se", (1, -1)},
+            {"sw", (-1, -1)}
         };
         public async Task<ActionResult<TargetModel>> DeleteTargetModelAsync(long id)
         {
@@ -94,51 +97,52 @@ namespace AgentTargetRest.Services
             }
         }
 
-        public async Task<TargetModel> MoveTarget(long id, DirectionsDto directionDto)
+        public async Task<TargetModel> PinAsync(PinDto pin, long id)
         {
             TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
-            if (target == null)
-            {
-                throw new Exception("Target not found");
-            }
+            if (target == null) { throw new Exception("Target not found"); }
+
+            target.X = pin.X;
+            target.Y = pin.Y;
+            await context.SaveChangesAsync();
+            await missionService.CreateListMissionsFromTargetPinMoveAsync(id);
+
+            return target;
+        }
+
+        public async Task<TargetModel> MoveTargetAsync(long id, DirectionsDto directionDto)
+        {
+            TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
+            if (target == null) {throw new Exception("Target not found"); }
+
             var (x, y) = Direction[directionDto.Direction];
             target.X += x;
             target.Y += y;
             if(target.X < 0 || target.X > 1000 || target.Y < 0 || target.Y > 1000)
             {
-                throw new Exception($"Range over, the target is in: ({target.X},{target.Y})");
+                throw new Exception($"Out of range, the target is in: ({target.X},{target.Y})");
             }
             await context.SaveChangesAsync();
+            await missionService.CreateListMissionsFromTargetPinMoveAsync(id);
 
             return target;
         }
 
-        public async Task<TargetModel> Pin(PinDto pin, long id)
+        public async Task<bool> IsTargetValidAsync(TargetModel target)
         {
-            TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
-            if (target == null)
+            // check about the db 
+            if (context.Missions.Any(t => t.TargetId == target.Id))
             {
-                throw new Exception("Target not found");
+                List<long> targetsId = await context.Missions
+                    .Where(m => m.MissionStatus != MissionStatus.KillPropose)
+                    .Select(m => m.TargetId).ToListAsync();
+                if (targetsId.Contains(target.Id))
+                    { return false; }
             }
-            target.X = pin.X;
-            target.Y = pin.Y;
-            await context.SaveChangesAsync();
-            return target;
+            return true;
         }
 
-        public async Task<bool> IsTargetValid(TargetModel target)
-        {
-            if (context.Targets.Any(t => t.Id == target.Id))
-            {
-                var a = await context.Missions.Where(m => m.MissionStatus == 0).ToListAsync();
-                var b = a.Select(a => a.TargetId).ToList();
-                if (b.Contains(target.Id))
-                { return true; }
-            }
-            return false;
-        }
-
-        public async Task<TargetModel> FindTargetById(long id)
+        public async Task<TargetModel> FindTargetByIdAsync(long id)
         {
             TargetModel? target = await context.Targets.FirstOrDefaultAsync(t => t.Id == id);
             if (target == null)

@@ -8,19 +8,19 @@ namespace AgentTargetRest.Services
 {
     public class AgentService(IServiceProvider serviceProvider, ApplicationDbContext context) : IAgentService
     {
-        private IMissionService missionService = serviceProvider.GetRequiredService<IMissionService>();
-        private ITargetService targetService = serviceProvider.GetRequiredService<ITargetService>();
+        private IMissionService missionService => serviceProvider.GetRequiredService<IMissionService>();
+        private ITargetService targetService => serviceProvider.GetRequiredService<ITargetService>();
 
         private readonly Dictionary<string, (int, int)> Direction = new()
         {
             {"n", (0, 1)},
             {"s", (0, -1)},
-            {"e", (-1, 0)},
-            {"w", (1, 0)},
-            {"ne", (-1, 1)},
-            {"nw", (1, 1)},
-            {"se", (-1, -1)},
-            {"sw", (1, -1)}
+            {"e", (1, 0)},
+            {"w", (-1, 0)},
+            {"ne", (1, 1)},
+            {"nw", (-1, 1)},
+            {"se", (1, -1)},
+            {"sw", (-1, -1)}
         };
         public async Task<List<AgentModel>> GetAgentsAsync()
         {
@@ -60,8 +60,6 @@ namespace AgentTargetRest.Services
             }
         }
 
-
-
         public async Task<ActionResult<AgentModel>> DeleteAgentModelAsync(long id)
         {
             var agentModel = await context.Agents.FindAsync(id);
@@ -81,40 +79,36 @@ namespace AgentTargetRest.Services
             return context.Agents.Any(e => e.Id == id);
         }
 
-        public async Task<AgentModel> MoveAgent(long id, DirectionsDto directionDto)
+        public async Task<AgentModel> PinAsync(PinDto pin, long id)
         {
             AgentModel? agent = await context.Agents.FirstOrDefaultAsync(t => t.Id == id);
-            if (agent == null)
-            {
-                throw new Exception("Target not found");
-            }
+            if (agent == null){ throw new Exception("Target not found"); }
+
+            agent.X = pin.X;
+            agent.Y = pin.Y;
+            await context.SaveChangesAsync();
+            await missionService.CreateListMissionsFromAgentPinMoveAsync(id);
+            return agent;
+        }
+
+        public async Task<AgentModel> MoveAgentAsync(long id, DirectionsDto directionDto)
+        {
+            AgentModel? agent = await context.Agents.FirstOrDefaultAsync(t => t.Id == id);
+            if (agent == null) { throw new Exception("Target not found"); }
+
             var (x, y) = Direction[directionDto.Direction];
             agent.X += x;
             agent.Y += y;
             if (agent.X < 0 || agent.X > 1000 || agent.Y < 0 || agent.Y > 1000)
             {
-                throw new Exception($"Range over, the agent is in: ({agent.X},{agent.Y})");
+                throw new Exception($"Out of range, the agent is in: ({agent.X},{agent.Y})");
             }
             await context.SaveChangesAsync();
-            var missionList = await missionService.CreateListMissionsFromAgent(id);
+            await missionService.CreateListMissionsFromAgentPinMoveAsync(id);
             return agent;
         }
-
-        public async Task<AgentModel> Pin(PinDto pin, long id)
-        {
-            AgentModel? agent = await context.Agents.FirstOrDefaultAsync(t => t.Id == id);
-            if (agent == null)
-            {
-                throw new Exception("Target not found");
-            }
-            agent.X = pin.X;
-            agent.Y = pin.Y;
-            await context.SaveChangesAsync();
-            return agent;
-        }
-
-      
-        public async Task<IdDto> CreateAgentModel(AgentDto agentDto)
+  
+        public async Task<IdDto> CreateAgentModelAsync(AgentDto agentDto)
         {
             try
             {
@@ -135,11 +129,10 @@ namespace AgentTargetRest.Services
             }
         }
 
-
         // function check if the agent are avalible for missions
-        public async Task<bool> IsAgentFree(long id)
+        public async Task<bool> IsAgentValidAsync(long id)
         {
-            var agent = await FindAgentById(id);
+            var agent = await FindAgentByIdAsync(id);
             if (agent.AgentStatus == AgentStatus.Dormant)
             {
                 return true;
@@ -147,9 +140,17 @@ namespace AgentTargetRest.Services
             return false;
         }
 
+        public bool IsAgentValid(AgentModel agent)
+        {
+            if (agent.AgentStatus == AgentStatus.Dormant)
+            {
+                return true;
+            }
+            return false;
+        }
 
         // function find the agent by id and return the agent
-        public async Task<AgentModel> FindAgentById(long id)
+        public async Task<AgentModel> FindAgentByIdAsync(long id)
         {
             AgentModel? agent = await context.Agents.FirstOrDefaultAsync(t => t.Id == id);
             if (agent == null)
@@ -157,8 +158,6 @@ namespace AgentTargetRest.Services
                 throw new Exception("Target not found");
             }
             return agent;
-        }
-
-    
+        }    
     }
 }

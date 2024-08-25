@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "AgentTargetRest.Controllers.AgentsController",
-    "Method": "GetAgents",
+    "Method": "GetAgentsAsync",
     "RelativePath": "Agents",
     "HttpMethod": "GET",
     "IsController": true,
@@ -21,7 +21,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.AgentsController",
-    "Method": "PostAgentModel",
+    "Method": "PostAgentModelAsync",
     "RelativePath": "Agents",
     "HttpMethod": "POST",
     "IsController": true,
@@ -109,7 +109,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.AgentsController",
-    "Method": "DeleteAgentModel",
+    "Method": "DeleteAgentModelAsync",
     "RelativePath": "Agents/delete-agent/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -125,7 +125,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.AgentsController",
-    "Method": "GetAgentModel",
+    "Method": "GetAgentModelAsync",
     "RelativePath": "Agents/get-agent/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -151,7 +151,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.AgentsController",
-    "Method": "PutAgentModel",
+    "Method": "PutAgentModelAsync",
     "RelativePath": "Agents/update-agent/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -171,24 +171,118 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AgentTargetRest.Controllers.MissionController",
-    "Method": "Create",
-    "RelativePath": "api/Mission/update",
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "GetAllMissionsAsync",
+    "RelativePath": "Missions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AgentTargetRest.Models.MissionModel, AgentTargetRest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "FuncAsync",
+    "RelativePath": "Missions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "CreateMission",
+    "RelativePath": "Missions/create-missions{agentId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "mission",
-        "Type": "AgentTargetRest.Models.MissionModel",
+        "Name": "agentId",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AgentTargetRest.Models.MissionModel, AgentTargetRest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "DeleteMissions",
+    "RelativePath": "Missions/delete-all",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "GetAllMissions",
+    "RelativePath": "Missions/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "UpdateAsync",
+    "RelativePath": "Missions/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "GetTarget",
+    "Method": "GetTargetAsync",
     "RelativePath": "Targets",
     "HttpMethod": "GET",
     "IsController": true,
@@ -208,7 +302,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "Create",
+    "Method": "CreateAsync",
     "RelativePath": "Targets",
     "HttpMethod": "POST",
     "IsController": true,
@@ -296,7 +390,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "DeleteTargetModel",
+    "Method": "DeleteTargetModelAsync",
     "RelativePath": "Targets/delete-target/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -312,7 +406,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "GetTargetModel",
+    "Method": "GetTargetModelAsync",
     "RelativePath": "Targets/get-target/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -338,7 +432,7 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.TargetsController",
-    "Method": "PutTargetModel",
+    "Method": "PutTargetModelAsync",
     "RelativePath": "Targets/update-target/{id}",
     "HttpMethod": "PUT",
     "IsController": true,

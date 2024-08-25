@@ -12,13 +12,13 @@ namespace AgentTargetRest.Controllers
     {
 
         [HttpGet]
-        public async Task<ActionResult<List<TargetModel>>> GetTarget()
+        public async Task<ActionResult<List<TargetModel>>> GetTargetAsync()
         {
             return Ok(await targetService.GetTargetsAsync());
         }
 
         [HttpGet("get-target/{id}")]
-        public async Task<ActionResult<TargetModel>> GetTargetModel(long id)
+        public async Task<ActionResult<TargetModel>> GetTargetModelAsync(long id)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpPut("update-target/{id}")]
-        public async Task<ActionResult<TargetModel>> PutTargetModel(long id, [FromBody] TargetModel target)
+        public async Task<ActionResult<TargetModel>> PutTargetModelAsync(long id, [FromBody] TargetModel target)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<long>> Create([FromBody] TargetDto targetDto)
+        public async Task<ActionResult<long>> CreateAsync([FromBody] TargetDto targetDto)
         {
             try
             { 
@@ -60,7 +60,7 @@ namespace AgentTargetRest.Controllers
         }
 
         [HttpDelete("delete-target/{id}")]
-        public async Task<IActionResult> DeleteTargetModel(long id)
+        public async Task<IActionResult> DeleteTargetModelAsync(long id)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace AgentTargetRest.Controllers
         {
             try
             {
-                return Ok(await targetService.Pin(pinDto, id));
+                return Ok(await targetService.PinAsync(pinDto, id));
             }
             catch (Exception ex)
             {
@@ -92,7 +92,7 @@ namespace AgentTargetRest.Controllers
         {
             try
             {
-                return Ok(await targetService.MoveTarget(id, directions));
+                return Ok(await targetService.MoveTargetAsync(id, directions));
             }
             catch (Exception ex)
             {
