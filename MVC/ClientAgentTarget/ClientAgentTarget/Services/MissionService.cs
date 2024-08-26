@@ -17,8 +17,8 @@ namespace ClientAgentTarget.Services
             if (result.IsSuccessStatusCode)
             {
                 var content1 = await result.Content.ReadAsStringAsync();
-                List<MissionModel?> missions = JsonSerializer.Deserialize<List<MissionModel>>(
-                    content1, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+                List<MissionModel> missions = JsonSerializer.Deserialize<List<MissionModel>>(
+                    content1, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }) ?? [];
                 return missions;
             }
             return null;

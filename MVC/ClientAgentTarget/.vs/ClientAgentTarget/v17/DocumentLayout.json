@@ -1,94 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\",
+  "WorkspaceRootPath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\generalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\generalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\services\\matrixservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\matrixservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\views\\general\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\general\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\igeneralservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\igeneralservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\viewmodel\\generalvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\viewmodel\\generalvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\targetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\services\\targetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\targetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\itargetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\itargetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\iagentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\iagentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\views\\mission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\mission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\agentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\agentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\views\\mission\\getalltargets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\mission\\getalltargets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\views\\mission\\getallagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\mission\\getallagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\missionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\services\\missionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\missionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\views\\mission\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\mission\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\services\\imissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\imissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\viewmodel\\statustargetsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\viewmodel\\statustargetsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\models\\targetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\models\\targetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\services\\imatrixservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\services\\imatrixservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\viewmodel\\statusagentsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\viewmodel\\statusagentsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\models\\missionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\models\\missionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\documents\\agenttarget (2)\\mvc\\clientagenttarget\\clientagenttarget\\models\\agentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\models\\agentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|c:\\users\\kodcode\\desktop\\vspro\\8586827_enosh_agent_mangaer\\mvc\\clientagenttarget\\clientagenttarget\\viewmodel\\matrixvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D775CA4C-F499-4246-9F7D-EFE5AC318967}|ClientAgentTarget\\ClientAgentTarget.csproj|solutionrelative:clientagenttarget\\viewmodel\\matrixvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,286 +42,111 @@
       "DocumentGroups": [
         {
           "DockedHeight": 225,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\General\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\General\\Index.cshtml",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\General\\Index.cshtml",
-              "RelativeToolTip": "ClientAgentTarget\\Views\\General\\Index.cshtml",
+              "Title": "TargetService.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\TargetService.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\TargetService.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\TargetService.cs",
+              "RelativeToolTip": "ClientAgentTarget\\Services\\TargetService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T13:53:15.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GeneralService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\GeneralService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\GeneralService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\GeneralService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\GeneralService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:27:03.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IGeneralService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IGeneralService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\IGeneralService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IGeneralService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\IGeneralService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:26:16.758Z",
+              "WhenOpened": "2024-08-26T12:53:39.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GeneralController.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\GeneralController.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Controllers\\GeneralController.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\GeneralController.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Controllers\\GeneralController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Title": "MissionService.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\MissionService.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\MissionService.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\MissionService.cs",
+              "RelativeToolTip": "ClientAgentTarget\\Services\\MissionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:24:44.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TargetService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\TargetService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\TargetService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\TargetService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\TargetService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:06:32.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ITargetService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\ITargetService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\ITargetService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\ITargetService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\ITargetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:06:18.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AgentService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\AgentService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\AgentService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\AgentService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\AgentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:06:01.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAgentService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IAgentService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\IAgentService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IAgentService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\IAgentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T13:05:46.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\Mission\\Index.cshtml",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\Index.cshtml",
-              "RelativeToolTip": "ClientAgentTarget\\Views\\Mission\\Index.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAADcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T12:49:35.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GeneralVM.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\GeneralVM.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\ViewModel\\GeneralVM.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\GeneralVM.cs",
-              "RelativeToolTip": "ClientAgentTarget\\ViewModel\\GeneralVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:51:41.478Z",
+              "WhenOpened": "2024-08-26T12:53:36.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Program.cs",
               "RelativeDocumentMoniker": "ClientAgentTarget\\Program.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Program.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Program.cs",
               "RelativeToolTip": "ClientAgentTarget\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T12:28:56.469Z",
+              "WhenOpened": "2024-08-26T12:52:31.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GetAllAgents.cshtml",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAllAgents.cshtml",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\Mission\\GetAllAgents.cshtml",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAllAgents.cshtml",
-              "RelativeToolTip": "ClientAgentTarget\\Views\\Mission\\GetAllAgents.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IMatrixService.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\IMatrixService.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\IMatrixService.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\IMatrixService.cs",
+              "RelativeToolTip": "ClientAgentTarget\\Services\\IMatrixService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T12:09:09.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ClientAgentTarget\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T13:16:17.997Z",
+              "WhenOpened": "2024-08-26T12:08:29.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GetAllTargets.cshtml",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAllTargets.cshtml",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\Mission\\GetAllTargets.cshtml",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAllTargets.cshtml",
-              "RelativeToolTip": "ClientAgentTarget\\Views\\Mission\\GetAllTargets.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T13:17:50.742Z",
+              "DocumentIndex": 7,
+              "Title": "MatrixVM.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\MatrixVM.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\ViewModel\\MatrixVM.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\MatrixVM.cs",
+              "RelativeToolTip": "ClientAgentTarget\\ViewModel\\MatrixVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T12:07:39.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GetAll.cshtml",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAll.cshtml",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Views\\Mission\\GetAll.cshtml",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Views\\Mission\\GetAll.cshtml",
-              "RelativeToolTip": "ClientAgentTarget\\Views\\Mission\\GetAll.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T12:48:12.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MissionController.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\MissionController.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Controllers\\MissionController.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\MissionController.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Controllers\\MissionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MatrixService.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\MatrixService.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\MatrixService.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Services\\MatrixService.cs",
+              "RelativeToolTip": "ClientAgentTarget\\Services\\MatrixService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T12:44:49.12Z",
+              "WhenOpened": "2024-08-26T12:06:57.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IMissionService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IMissionService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\IMissionService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\IMissionService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\IMissionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ClientAgentTarget\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ClientAgentTarget\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T12:44:01.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MissionService.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\MissionService.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Services\\MissionService.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Services\\MissionService.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Services\\MissionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T12:28:09.368Z",
+              "WhenOpened": "2024-08-26T12:06:16.879Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "StatusTargetsVM.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\StatusTargetsVM.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\ViewModel\\StatusTargetsVM.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\StatusTargetsVM.cs",
-              "RelativeToolTip": "ClientAgentTarget\\ViewModel\\StatusTargetsVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T12:04:30.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "StatusAgentsVM.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\StatusAgentsVM.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\ViewModel\\StatusAgentsVM.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ViewModel\\StatusAgentsVM.cs",
-              "RelativeToolTip": "ClientAgentTarget\\ViewModel\\StatusAgentsVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:59:35.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MissionModel.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\MissionModel.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Models\\MissionModel.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\MissionModel.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Models\\MissionModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:48:14.842Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TargetModel.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\TargetModel.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Models\\TargetModel.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\TargetModel.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Models\\TargetModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:47:37.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AgentModel.cs",
-              "DocumentMoniker": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\AgentModel.cs",
-              "RelativeDocumentMoniker": "ClientAgentTarget\\Models\\AgentModel.cs",
-              "ToolTip": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\Models\\AgentModel.cs",
-              "RelativeToolTip": "ClientAgentTarget\\Models\\AgentModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T11:46:21.945Z"
             }
           ]
         }

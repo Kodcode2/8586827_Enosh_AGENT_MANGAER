@@ -10,6 +10,7 @@ builder.Services.AddScoped<IMissionService, MissionService>();
 builder.Services.AddScoped<ITargetService, TargetService>();
 builder.Services.AddScoped<IAgentService, AgentService>();
 builder.Services.AddScoped<IGeneralService, GeneralService>();  
+builder.Services.AddScoped<IMatrixService, MatrixService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<ClientAgentTarget.ViewModel.AssignedVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentLocationX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentLocationY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetLocationX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetLocationY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeUntillEliminated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MissionSituation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentLocationX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentLocationY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetLocationX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetLocationY)
+            </td>
+            <td>
+                @Html.Raw($"<img src='{item.TargetImage}' alt='Image' />")    
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeUntillEliminated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionSituation)
+            </td>
+            <td>
+                    @if (item.MissionSituation == MissionStatus.KillPropose.ToString())
+                    {
+                        @Html.ActionLink("Assinged", "Confirm", new { missionId = item.MissionId })
+                    }
+                    | @Html.ActionLink("MissionDetails", "MissionDetails", new { missionId = item.MissionId })
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

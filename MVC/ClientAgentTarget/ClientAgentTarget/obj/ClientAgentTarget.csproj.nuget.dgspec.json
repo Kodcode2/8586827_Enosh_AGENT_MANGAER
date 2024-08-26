@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj": {}
+    "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj": {
+    "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj",
+        "projectUniqueName": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj",
         "projectName": "ClientAgentTarget",
-        "projectPath": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj",
+        "projectPath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\ClientAgentTarget.csproj",
         "packagesPath": "C:\\Users\\kodcode\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kodcode\\Documents\\AgentTarget (2)\\Mvc\\ClientAgentTarget\\ClientAgentTarget\\obj\\",
+        "outputPath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\MVC\\ClientAgentTarget\\ClientAgentTarget\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

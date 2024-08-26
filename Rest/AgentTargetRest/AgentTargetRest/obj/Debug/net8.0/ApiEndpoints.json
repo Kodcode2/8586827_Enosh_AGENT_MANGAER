@@ -266,6 +266,16 @@
   },
   {
     "ContainingType": "AgentTargetRest.Controllers.MissionsController",
+    "Method": "GetProposeMissions",
+    "RelativePath": "Missions/get-propose",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgentTargetRest.Controllers.MissionsController",
     "Method": "UpdateAsync",
     "RelativePath": "Missions/update",
     "HttpMethod": "POST",

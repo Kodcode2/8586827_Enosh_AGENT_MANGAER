@@ -50,7 +50,7 @@ namespace AgentTargetRest.Services
 
         public async Task<List<TargetModel>> GetTargetsAsync()
         {
-            return await context.Targets.ToListAsync();
+            return await context.Targets.Where(t => t.X != -1 || t.Y != -1).ToListAsync();
         }
 
         public async Task<IdDto> CreateTargetModel(TargetDto targetDto)

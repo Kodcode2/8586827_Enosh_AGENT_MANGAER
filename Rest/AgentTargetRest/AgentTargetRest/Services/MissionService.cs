@@ -45,6 +45,7 @@ namespace AgentTargetRest.Services
             return validTargets2;
         }
 
+
         // If agent move/pin this function will check if thete is any target around
         // <FOR PIN/MOVE>
         public async Task<List<MissionModel>> CreateListMissionsFromAgentPinMoveAsync(long agentId)
@@ -52,23 +53,64 @@ namespace AgentTargetRest.Services
             if (await agentService.IsAgentValidAsync(agentId))
             {
                 var agent = await agentService.FindAgentByIdAsync(agentId);
-
+                var missions = await context.Missions.ToListAsync();
+                var targets = await context.Targets.ToListAsync();
                 // filter if the targets are too far
-                var validTargets1 = await context.Targets.Where(t => (Math.Sqrt(Math.Pow(t.X - agent.X, 2)
+                var validTargetsByDistance = await context.Targets.Where(t => (Math.Sqrt(Math.Pow(t.X - agent.X, 2)
               + Math.Pow(t.Y - agent.Y, 2))) < 200).ToListAsync();
                 // filter if there is no other agent on the target
-                var validTargets2 = await FilterValidTargetsAsync(validTargets1);
+                List<TargetModel> targetsWithoutMissions = targets.Where(t => !missions.Exists(m => m.TargetId == t.Id)).ToList();
+                // join missions to targets by distance
+                // filter only if is kill propose and agent id is not on mission id
+                // and taget by distance (id) not on mission tagertId
+                List<TargetModel> validTargets = [
+                    ..targetsWithoutMissions,
+                    ..(from m in missions
+                    join t in validTargetsByDistance on m.TargetId equals t.Id
+                    where m.MissionStatus == MissionStatus.KillPropose &&
+                    m.AgentId != agentId &&
+                    m.TargetId != t.Id
+                    select t)
+                .ToList()
+                ];
+
+                // var validTargets2 = await FilterValidTargetsAsync(validTargetsByDistance);
                 // create list of missions after the filters
-                List<MissionModel> missions = validTargets2.Select(t => new MissionModel
+                List<MissionModel> createMissions = validTargets.Select(t => new MissionModel
                 {
                     AgentId = agent.Id,
                     TargetId = t.Id,
                     TimeLeft = Distance(agent, t) / 5,
-                }).ToList();
-                //var missions2 = missions.Where(m => m.AgentId != context.Missions.Any(mi => mi.AgentId) && m.TargetId != context.Missions(mi => mi.TargetId));
-                var missions1 = missions.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
-                context.Missions.AddRange(missions1);
-                context.SaveChanges();
+                })
+                    .ToList();
+                //var missions2 = missionsToSave.Where(m => m.AgentId != context.Missions.Any(mi => mi.AgentId) && m.TargetId != context.Missions(mi => mi.TargetId));
+                 var missionsToSave = createMissions.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
+
+                /*var filteredMissions = missions
+                        .GroupBy(m => new { m.TargetId, m.AgentId })
+                        .Select(g => g.First())
+                        .ToList();
+
+                var filteredMissionsInContext = filteredMissions
+                    .Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId))
+                    .ToList();
+
+                foreach (MissionModel mission in missionsToSave)
+                {
+                    var counter = 0;
+                    foreach (MissionModel missionin in missionsToSave)
+                    {
+                        if (mission.AgentId == missionin.AgentId && mission.TargetId == missionin.TargetId)
+                            counter++;
+                    }
+                    if (counter > 1)
+                    {
+                        missionsToSave.Remove(mission);
+                    }
+                }*/
+                //var missions = missionsToSave.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
+                await context.Missions.AddRangeAsync(missionsToSave);
+                await context.SaveChangesAsync();
                 return missions;
             }
             throw new Exception("The agent on task in another mission");
@@ -80,7 +122,7 @@ namespace AgentTargetRest.Services
         {
             var target = await targetService.FindTargetByIdAsync(targetId);
             // Check if there is no other agent on the target
-            if (context.Missions.Any(m => m.TargetId == targetId && m.MissionStatus == MissionStatus.KillPropose))
+            if (context.Missions.Any(m => m.TargetId == targetId && m.MissionStatus == MissionStatus.KillPropose) || !context.Missions.Any(m => m.TargetId == targetId))
             {
                 if (target.TargetStatus == TargetStatus.Alive)
                 {
@@ -89,14 +131,38 @@ namespace AgentTargetRest.Services
                     + Math.Pow(target.Y - a.Y, 2))) < 200).ToListAsync();
                     var validAgents2 = validAgents1.Where(agentService.IsAgentValid);
                     // create list of missions after the filters
-                    List<MissionModel> missions = validAgents2.Select(a => new MissionModel
+                    List<MissionModel> missionsToSave = validAgents2.Select(a => new MissionModel
                     {
                         AgentId = a.Id,
                         TargetId = targetId,
+                        TimeLeft = Distance(a, target) / 5,
                     }).ToList();
+                   /* var filteredMissions = missions
+                        .GroupBy(m => new { m.TargetId, m.AgentId })
+                        .Select(g => g.First())
+                        .ToList();
+
+                    // Filter out missions that don't exist in the context
+                    var filteredMissionsInContext = filteredMissions
+                        .Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId))
+                        .ToList();
+                    foreach (MissionModel mission in missionsToSave)
+                    {
+                        var counter = 0;
+                        foreach (MissionModel missionin in missionsToSave)
+                        {
+                            if (mission.AgentId == missionin.AgentId && mission.TargetId == missionin.TargetId)
+                                counter++;
+                        }
+                        if (counter > 1)
+                        {
+                            missionsToSave.Remove(mission);
+                        }
+                    }*/
+                    var missions = missionsToSave.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
                     context.Missions.AddRange(missions);
                     context.SaveChanges();
-                    return missions;
+                    return missionsToSave;
                 }
                 throw new Exception("There is already agent on this target");
             }
@@ -135,9 +201,15 @@ namespace AgentTargetRest.Services
             context.Missions.Remove(mission);
         }
 
+        private bool RmoveableMissions(MissionModel mission, AgentModel agent, TargetModel target) => (
+            mission.MissionStatus == MissionStatus.KillPropose
+            && mission.TargetId == target.Id || mission.AgentId == agent.Id
+        );
+
+
         // <FOR USER CREATE>
         public async Task<MissionModel> FilterMissionsAndDeleteAfterAssigned
-            (MissionModel mission, AgentModel agent, TargetModel target)
+        (MissionModel mission, AgentModel agent, TargetModel target)
         {
             try
             {
@@ -169,8 +241,10 @@ namespace AgentTargetRest.Services
             await ChangeStatusesAfterAssingeAsync(mission, target, agent);
             var missions = await context.Missions.Where(m => m.MissionStatus == 0).ToListAsync();
 
-            Task[] tasks = missions.Select(async (m) => await FilterMissionsAndDeleteAfterAssigned(m, agent, target)).ToArray();
-            Task.WaitAll(tasks);
+            var removeableMissions = missions.Where(m => RmoveableMissions(m, agent, target)).ToList();
+            context.Missions.RemoveRange(removeableMissions);
+            await context.SaveChangesAsync();
+
             await CalculateTimeUntilAssassinAndMoveTheAgentAsync(agent, target, mission);
 
             // !!! throw new Exception("One or more of the models status is not avalible");
@@ -202,8 +276,9 @@ namespace AgentTargetRest.Services
             (int x, int y) agentLocation = MoveAgentAfterTarget1(agent!, target!);
             if (agentLocation.x == -10 && agentLocation.y == -10)
             {
+
                 AfterTheMissionSuccess(mission, agent, target);
-                ;
+                return;
             }
             agent!.X = agentLocation.x;
             agent.Y = agentLocation.y;

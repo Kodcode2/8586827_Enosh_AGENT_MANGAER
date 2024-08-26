@@ -9,5 +9,7 @@ namespace ClientAgentTarget.Controllers
         {
             return View(await generalService.CreateGeneralTable());
         }
+
+
     }
 }

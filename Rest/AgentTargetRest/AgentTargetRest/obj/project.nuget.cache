@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "223MsPkf17A=",
+  "dgSpecHash": "ggp5A445GZw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kodcode\\Downloads\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
+  "projectFilePath": "C:\\Users\\kodcode\\Desktop\\vspro\\8586827_Enosh_AGENT_MANGAER\\Rest\\AgentTargetRest\\AgentTargetRest\\AgentTargetRest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kodcode\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\kodcode\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

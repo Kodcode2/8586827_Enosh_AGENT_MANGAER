@@ -24,7 +24,6 @@ namespace AgentTargetRest.Services
         };
         public async Task<List<AgentModel>> GetAgentsAsync()
         {
-            var a = context.Agents;
             return await context.Agents.ToListAsync();
         }
 

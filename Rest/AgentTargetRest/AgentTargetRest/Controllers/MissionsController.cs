@@ -57,5 +57,18 @@ namespace AgentTargetRest.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("get-propose")]
+        public async Task<ActionResult> GetProposeMissions()
+        {
+            try
+            {
+                return Ok(await missionService.GetProposeMisionsAsync());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
