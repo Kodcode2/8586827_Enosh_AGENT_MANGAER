@@ -82,34 +82,10 @@ namespace AgentTargetRest.Services
                     TargetId = t.Id,
                     TimeLeft = Distance(agent, t) / 5,
                 })
+                    .Where(m => !missions.Exists(em => em.TargetId != m.TargetId && em.AgentId != m.AgentId))
                     .ToList();
-                //var missions2 = missionsToSave.Where(m => m.AgentId != context.Missions.Any(mi => mi.AgentId) && m.TargetId != context.Missions(mi => mi.TargetId));
-                 var missionsToSave = createMissions.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
-
-                /*var filteredMissions = missions
-                        .GroupBy(m => new { m.TargetId, m.AgentId })
-                        .Select(g => g.First())
-                        .ToList();
-
-                var filteredMissionsInContext = filteredMissions
-                    .Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId))
-                    .ToList();
-
-                foreach (MissionModel mission in missionsToSave)
-                {
-                    var counter = 0;
-                    foreach (MissionModel missionin in missionsToSave)
-                    {
-                        if (mission.AgentId == missionin.AgentId && mission.TargetId == missionin.TargetId)
-                            counter++;
-                    }
-                    if (counter > 1)
-                    {
-                        missionsToSave.Remove(mission);
-                    }
-                }*/
-                //var missions = missionsToSave.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
-                await context.Missions.AddRangeAsync(missionsToSave);
+            
+                await context.Missions.AddRangeAsync(createMissions);
                 await context.SaveChangesAsync();
                 return missions;
             }
@@ -131,35 +107,16 @@ namespace AgentTargetRest.Services
                     + Math.Pow(target.Y - a.Y, 2))) < 200).ToListAsync();
                     var validAgents2 = validAgents1.Where(agentService.IsAgentValid);
                     // create list of missions after the filters
-                    List<MissionModel> missionsToSave = validAgents2.Select(a => new MissionModel
-                    {
-                        AgentId = a.Id,
-                        TargetId = targetId,
-                        TimeLeft = Distance(a, target) / 5,
-                    }).ToList();
-                   /* var filteredMissions = missions
-                        .GroupBy(m => new { m.TargetId, m.AgentId })
-                        .Select(g => g.First())
-                        .ToList();
-
-                    // Filter out missions that don't exist in the context
-                    var filteredMissionsInContext = filteredMissions
-                        .Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId))
-                        .ToList();
-                    foreach (MissionModel mission in missionsToSave)
-                    {
-                        var counter = 0;
-                        foreach (MissionModel missionin in missionsToSave)
+                    var missions = await context.Missions.ToListAsync();
+                    List<MissionModel> missionsToSave = validAgents2
+                        .Select(a => new MissionModel
                         {
-                            if (mission.AgentId == missionin.AgentId && mission.TargetId == missionin.TargetId)
-                                counter++;
-                        }
-                        if (counter > 1)
-                        {
-                            missionsToSave.Remove(mission);
-                        }
-                    }*/
-                    var missions = missionsToSave.Where(m => !context.Missions.Any(mi => mi.AgentId != m.AgentId && mi.TargetId != m.TargetId));
+                            AgentId = a.Id,
+                            TargetId = targetId,
+                            TimeLeft = Distance(a, target) / 5,
+                        })
+                    .Where(m => !missions.Exists(em => em.TargetId != m.TargetId && em.AgentId != m.AgentId))
+                    .ToList();
                     context.Missions.AddRange(missions);
                     context.SaveChanges();
                     return missionsToSave;

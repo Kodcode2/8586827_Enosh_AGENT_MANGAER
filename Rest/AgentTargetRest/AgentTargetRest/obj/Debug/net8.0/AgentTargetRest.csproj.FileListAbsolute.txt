@@ -1012,3 +1012,4 @@ C:\Users\kodcode\Downloads\AgentTargetRest\AgentTargetRest\obj\Debug\net8.0\refi
 C:\Users\kodcode\Downloads\AgentTargetRest\AgentTargetRest\obj\Debug\net8.0\AgentTargetRest.pdb
 C:\Users\kodcode\Downloads\AgentTargetRest\AgentTargetRest\obj\Debug\net8.0\AgentTargetRest.genruntimeconfig.cache
 C:\Users\kodcode\Downloads\AgentTargetRest\AgentTargetRest\obj\Debug\net8.0\ref\AgentTargetRest.dll
+C:\Users\kodcode\Desktop\vspro\8586827_Enosh_AGENT_MANGAER\Rest\AgentTargetRest\AgentTargetRest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
